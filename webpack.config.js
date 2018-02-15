@@ -38,6 +38,21 @@ const config = {
         options: {
           pretty: true
         }
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,  
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8000,
+              name: './images/[name].[ext]'
+            }
+          },
+          {
+            loader: 'image-webpack-loader'
+          }
+        ]
       }
     ]
   },
