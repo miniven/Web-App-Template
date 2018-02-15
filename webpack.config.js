@@ -17,14 +17,20 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.css$/,
         use: ExtractTextPlugin.extract({
           use: [
             { loader: 'css-loader' },
-            { loader: 'sass-loader' }
+            { loader: 'postcss-loader' }
           ],
           fallback: 'style-loader'
         })
+      },
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.pug$/,
