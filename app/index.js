@@ -1,3 +1,2 @@
-import './scripts/images.js';
-
+import './scripts/images';
 import './styles/main.css';

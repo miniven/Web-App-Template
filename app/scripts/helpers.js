@@ -1,7 +1,8 @@
 const setImageSrc = (node, source) => {
-	node.src = source;
+  const imageNode = node;
+  imageNode.src = source;
 
-	return source;
+  return source;
 };
 
 export { setImageSrc };
