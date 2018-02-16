@@ -66,12 +66,12 @@ yarn build
     │   ├── index.js
     │   └── index.pug
     └── dist
-      ├── styles
-      │   ├── main.css
-      │   └── main.css.map
-      ├── index.html
-      ├── main.bundle.js
-      └── main.bundle.js.map
+        ├── styles
+        │   ├── main.css
+        │   └── main.css.map
+        ├── index.html
+        ├── main.bundle.js
+        └── main.bundle.js.map
 
 ## Work with images
 
