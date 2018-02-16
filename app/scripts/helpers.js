@@ -1,6 +1,6 @@
-const setImageSrc = (node, source) => {
-  const imageNode = node;
-  imageNode.src = source;
+const setImageSrc = (selector, source) => {
+  const image = document.querySelector(selector);
+  image.src = source;
 
   return source;
 };

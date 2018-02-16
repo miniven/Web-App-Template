@@ -3,11 +3,3 @@
 
 /*/////////// Modules ////////////*/
 @import '_modules/title';
-
-body {
-  color: red;
-}
-
-.hello {
-  color: red;
-}
