@@ -22,7 +22,7 @@ or
 yarn install
 ```
 
-## 3. Run the App
+### 3. Run the App
 
 ```
 npm run start
@@ -51,31 +51,32 @@ yarn build
 
 ## Project Structure
 
-	├── app
-	│   ├── base
-	│ 	│	└── layout.pug
-	│   ├── images
-	│ 	├── scripts
-	│ 	│	├── helpers.js
-	│ 	│	└── images.js
-	│ 	├── styles
-	│ 	│	├── _modules
-	│ 	│	├── _base.css
-	│ 	│	├── _variables.css
-	│ 	│	└── main.css
-	│ 	├── index.js
-	│   └── index.pug
-	└── dist
-		├── styles
-		│	├── main.css
-		│	└── main.css.map
-		├── index.html
-		├── main.bundle.js
-		└── main.bundle.js.map
+    ├── app
+    │   ├── base
+    │   │   └── layout.pug
+    │   ├── images
+    │   ├── scripts
+    │   │   ├── helpers.js
+    │   │   └── images.js
+    │   ├── styles
+    │   │   ├── _modules
+    │   │   ├── _base.css
+    │   │   ├── _variables.css
+    │   │   └── main.css
+    │   ├── index.js
+    │   └── index.pug
+    └── dist
+      ├── styles
+      │   ├── main.css
+      │   └── main.css.map
+      ├── index.html
+      ├── main.bundle.js
+      └── main.bundle.js.map
 
 ## Work with images
 
 You have to import every image you are going to use in your app in `images.js`:
+
 If your image is less then 8KB:
 
 ```
@@ -84,6 +85,7 @@ setImageSrc('.image', icon);
 ```
 
 Webpack will automatically generate Base64 inline image.
+
 Otherwise webpack will optimize you image and put it in `dist/images/`:
 
 ```
