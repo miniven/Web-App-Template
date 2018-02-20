@@ -1,1 +1,1 @@
-// import { setImageSrc } from './helpers';
+import { setImageSrc } from './helpers';
