@@ -20,7 +20,12 @@ const config = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           use: [
-            { loader: 'css-loader' },
+            { 
+              loader: 'css-loader',
+              options: {
+                modules: false
+              } 
+            },
             { loader: 'postcss-loader' }
           ],
           fallback: 'style-loader'
@@ -42,13 +47,14 @@ const config = {
         }
       },
       {
-        test: /\.(png|jp(e*)g|svg)$/,  
+        test: /\.(png|jpg|svg)$/,  
         use: [
           {
             loader: 'url-loader',
             options: {
               limit: 8000,
-              name: './images/[name].[ext]'
+              publicPath: '../',
+              name: 'images/[name].[ext]'
             }
           },
           {

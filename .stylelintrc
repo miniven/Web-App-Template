@@ -1,7 +1,10 @@
 {
   "extends": "stylelint-config-htmlacademy",
   "rules": {
-  	"string-quotes": "single",
-  	"selector-pseudo-element-colon-notation": "single"
-  }
+    "string-quotes": "single",
+    "selector-pseudo-element-colon-notation": "single"
+  },
+  "ignoreFiles": [
+    "./node_modules/**/*.css"
+  ]
 }
