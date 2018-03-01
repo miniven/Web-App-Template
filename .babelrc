@@ -1,12 +1,9 @@
 {
   "plugins": [
+    "transform-es2015-destructuring",
     "transform-object-rest-spread"
   ],
   "presets": [
-    ["env", {
-      "targets": {
-        "browsers": ["last 10 versions"]
-      }
-    }]
+    "env"
   ]
 }

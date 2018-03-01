@@ -33,11 +33,10 @@ const config = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          loader: 'eslint-loader'
-        }
+        use: [
+          { loader: 'babel-loader' },
+          { loader: 'eslint-loader' }
+        ]
       },
       {
         test: /\.pug$/,
@@ -58,9 +57,23 @@ const config = {
             }
           },
           {
-            loader: 'image-webpack-loader'
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 95
+              }
+            }
           }
         ]
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2)$/,
+        loader: 'file-loader',
+        options: {
+          publicPath: '../',
+          name: 'fonts/[name].[ext]'
+        }
       }
     ]
   },
@@ -70,7 +83,8 @@ const config = {
       disable: process.env.NODE_ENV === "development"
     }),
     new HtmlWebpackPlugin({
-      template: './app/index.pug'
+      template: './app/index.pug',
+      favicon: './app/favicon.ico'
     })
   ]
 };

@@ -1,23 +1,26 @@
 {
   "dependencies": {
-    "css-loader": "^0.28.9",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^4.7.2"
+    "css-loader": "^0.28.9"
   },
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^7.1.3",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
     "cssnano": "^3.10.0",
     "eslint": "^4.17.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^2.30.1",
@@ -34,8 +37,10 @@
     "stylelint": "^8.4.0",
     "stylelint-config-htmlacademy": "^0.1.1",
     "stylelint-config-standard": "^18.1.0",
+    "uglifyjs-webpack-plugin": "^1.2.2",
     "url-loader": "^0.6.2",
     "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-dev-server": "^2.11.1",
+    "webpack-merge": "^4.1.2"
   }
 }

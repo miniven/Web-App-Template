@@ -56,8 +56,7 @@ yarn build
     │   │   └── layout.pug
     │   ├── images
     │   ├── scripts
-    │   │   ├── helpers.js
-    │   │   └── images.js
+    │   │   └── helpers.js
     │   ├── styles
     │   │   ├── _modules
     │   │   ├── _base.css
@@ -75,22 +74,15 @@ yarn build
 
 ## Work with images
 
-You have to import every image you are going to use in your app in `images.js`:
-
-If your image is less then 8KB:
+You have to require every image you are going to use in your .pug file:
 
 ```
-import icon from '../images/icon.png';
-setImageSrc('.image', icon);
+<img src=require('example.png') alt="Example">
 ```
 
-Webpack will automatically generate Base64 inline image.
+If your image is less then 8KB Webpack will automatically generate Base64 inline image.
 
 Otherwise webpack will optimize you image and put it in `dist/images/`:
-
-```
-import '../images/background.jpg';
-```
 
 ## Authors
 

@@ -1,8 +1,3 @@
-const setImageSrc = (selector, source) => {
-  const image = document.querySelector(selector);
-  image.src = source;
+const isMobile = () => window.matchMedia('(max-width: 991px)').matches;
 
-  return source;
-};
-
-export { setImageSrc };
+export { isMobile };
