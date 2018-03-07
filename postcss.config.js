@@ -23,7 +23,9 @@ module.exports = {
 				}
 			}),
 			require('postcss-nested'),
-        require('postcss-cssnext'),
-        require('cssnano')
+      require('postcss-cssnext'),
+      require('cssnano')({
+      	zindex: false
+      })
     ]
 }
