@@ -37,43 +37,6 @@ const config = {
           { loader: 'babel-loader' },
           { loader: 'eslint-loader' }
         ]
-      },
-      {
-        test: /\.pug$/,
-        loader: 'pug-loader',
-        options: {
-          pretty: true
-        }
-      },
-      {
-        test: /\.(png|jpg|svg)$/,  
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8000,
-              publicPath: '../',
-              name: 'images/[name].[ext]'
-            }
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-              mozjpeg: {
-                progressive: true,
-                quality: 95
-              }
-            }
-          }
-        ]
-      },
-      {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader',
-        options: {
-          publicPath: '../',
-          name: 'fonts/[name].[ext]'
-        }
       }
     ]
   },
@@ -83,7 +46,7 @@ const config = {
       disable: process.env.NODE_ENV === "development"
     }),
     new HtmlWebpackPlugin({
-      template: './app/index.pug',
+      template: './app/index.html',
       favicon: './app/favicon.ico'
     })
   ]

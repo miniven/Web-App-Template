@@ -1,3 +1,13 @@
 :root {
-  --main-color: #1e1e1e;
+  --link-bg-color: #c8d6e5;
+  --link-text-color: #222f3e;
+  --link-focus-color: #8395a7;
+
+  --font-family: 'Open Sans', 'Arial', sans-serif;
+
+  --input-border-color: #e8e8e8;
+  --input-focus-color: #576574;
+
+  --button-bg-color: #5f27cd;
+  --button-focus-color: #1f0e42;
 }
