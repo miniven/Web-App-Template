@@ -81,8 +81,8 @@ yarn build
 
 You have to require every image you are going to use in your .pug file:
 
-```
-<img src=require('example.png') alt="Example">
+```pug
+img(src=require('example.png') alt="Example")
 ```
 
 If your image is less then 8KB Webpack will automatically generate Base64 inline image.
