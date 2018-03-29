@@ -1,5 +1,6 @@
 @import '_variables';
+@import '_media';
 @import '_base';
 
 /*/////////// Modules ////////////*/
-@import '_modules/title';
+@import '../modules/title/title';

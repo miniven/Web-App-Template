@@ -53,12 +53,17 @@ yarn build
 
     ├── app
     │   ├── base
-    │   │   └── layout.pug
+    │   │   ├── layout
+    │   │   └── index.pug
     │   ├── images
+    │   ├── modules
+    │   │   └── module-name
+    │   │       ├── module-name.css
+    │   │       ├── module-name.js (optional)
+    │   │       └── module-name.pug (optional)
     │   ├── scripts
     │   │   └── helpers.js
     │   ├── styles
-    │   │   ├── _modules
     │   │   ├── _base.css
     │   │   ├── _variables.css
     │   │   └── main.css
