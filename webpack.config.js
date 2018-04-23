@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const dotenv = require('dotenv-webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -85,7 +87,13 @@ const config = {
     new HtmlWebpackPlugin({
       template: './app/index.pug',
       favicon: './app/favicon.ico'
-    })
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        TYPE: JSON.stringify(process.env.TYPE),
+      }
+    }),
+    new dotenv()
   ]
 };
 

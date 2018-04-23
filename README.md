@@ -87,7 +87,19 @@ img(src=require('example.png') alt="Example")
 
 If your image is less then 8KB Webpack will automatically generate Base64 inline image.
 
-Otherwise webpack will optimize you image and put it in `dist/images/`:
+Otherwise webpack will optimize you image and put it in `dist/images/`.
+
+## Environment Variables
+
+In case you need conditional build you can use environment variables.
+
+1. Create a script in package.json: `"build": "cross-env NAME='VALUE' webpack"`
+2. Declare the variable in webpack.config.js via webpack.DefinePlugin: `'process.env': { NAME: JSON.stringify(process.env.VALUE) }`
+3. Access it in your code this way: `process.env.VALUE`
+
+This allows you to build same pages with different data depending on variables.
+
+You also can declare variables in `.env` file.
 
 ## Authors
 

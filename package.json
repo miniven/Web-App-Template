@@ -1,10 +1,13 @@
 {
   "dependencies": {
-    "css-loader": "^0.28.9"
+    "cross-env": "5.1.4",
+    "css-loader": "^0.28.9",
+    "dotenv": "5.0.1",
+    "dotenv-webpack": "1.5.5"
   },
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server"
+    "build": "cross-env TYPE='MAIN' webpack",
+    "start": "cross-env TYPE='MAIN' webpack-dev-server"
   },
   "devDependencies": {
     "babel": "^6.23.0",
